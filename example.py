@@ -18,7 +18,8 @@ with grad_cam(conv, size=image.shape[-2:]) as compute:
     # 3. forward
     logits = model(image[None])
     # 4. backward
-    loss = logits.log_softmax(-1).max(-1)[0]
+    logps = logits.log_softmax(-1)
+    loss = logps.max(-1)[0].mean(0)
     loss.backward()
     # 5. get the cam!
     cam = compute()[0]

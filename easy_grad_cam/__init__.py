@@ -31,7 +31,8 @@ def grad_cam(module, size=None):
             cam = F.interpolate(cam, size,
                                 mode='bilinear',
                                 align_corners=True)
-        cam /= cam.flatten(-2, -1).max(dim=-1)[0]
+        high = cam.flatten(-2).max(dim=-1)[0]
+        cam /= high[..., None, None]
         return cam
 
     try:
