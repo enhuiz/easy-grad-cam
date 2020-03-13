@@ -29,7 +29,6 @@ with grad_cam(conv, size=image.shape[-2:]) as compute:
     # 3. forward
     logits = model(image[None])
     # 4. backward
-    model.zero_grad()
     loss = logits.log_softmax(-1).max(-1)[0]
     loss.backward()
     # 5. get the cam!
