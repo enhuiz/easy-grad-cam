@@ -43,3 +43,7 @@ plt.imshow(blended)
 plt.show()
 ```
 
+| Original         | GradCAM                  |
+| ---------------- | ------------------------ |
+| ![](cat_dog.png) | ![](cat_and_dog_cam.png) |
+

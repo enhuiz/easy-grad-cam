@@ -27,6 +27,6 @@ with grad_cam(conv, size=image.shape[-2:]) as compute:
 # 6. blend the cam with the original image
 blended = blend(image, cam)
 
-# 7. plot it
-plt.imshow(blended)
+# 7. save it
+plt.imsave('cat_and_dog_cam.png', blended)
 plt.show()
