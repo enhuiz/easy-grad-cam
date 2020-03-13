@@ -47,3 +47,7 @@ plt.show()
 | ---------------- | ------------------------ |
 | ![](cat_dog.png) | ![](cat_and_dog_cam.png) |
 
+
+## Reference
+
+Selvaraju, Ramprasaath R., et al. "Grad-cam: Visual explanations from deep networks via gradient-based localization." Proceedings of the IEEE international conference on computer vision. 2017.
